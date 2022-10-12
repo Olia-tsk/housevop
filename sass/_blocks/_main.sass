@@ -1,0 +1,56 @@
+.main
+  background: linear-gradient(180deg, #242B33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242B33 92.19%), url("/img/main_bg.png")
+  background-repeat: no-repeat, no-repeat
+  background-size: cover, cover
+  background-position: center, center
+  height: 100vh
+  & .container
+    height: calc( 100vh - 10px )
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &-header
+    padding-top: 30px
+    padding-bottom: 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-title
+    width: 556px
+    margin-right: auto
+    margin-left: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+  &-bottom
+    display: flex
+    justify-content: center
+    margin-bottom: 74px
+
+.header
+  &-logo
+    width: 134px
+    object-fit: contain
+    object-position: center
+  &-menu
+    display: flex
+    &_item
+      margin-left: 40px
+    &_link
+      color: #FFFFFF
+      font-weight: 400
+      font-size: 14px
+      line-height: 16px
+      letter-spacing: 0.05em
+
+.contacts
+  &-item
+    margin-right: 100px
+    display: flex
+    align-items: center
+    font-size: 18px
+    line-height: 21px
+    font-weight: 400
+    color: #FFFFFF
+    &_icon
+      margin-right: 14px
