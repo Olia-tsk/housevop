@@ -5,7 +5,7 @@
   background-position: center, center
   height: 100vh
   & .container
-    height: calc( 100vh - 10px )
+    height: calc( 100vh - 5px )
     display: flex
     flex-direction: column
     justify-content: space-between
@@ -23,9 +23,11 @@
     flex-direction: column
     align-items: center
   &-bottom
+    width: 530px
     display: flex
-    justify-content: center
+    justify-content: space-between
     margin-bottom: 74px
+    align-self: center
 
 .header
   &-logo
@@ -45,7 +47,6 @@
 
 .contacts
   &-item
-    margin-right: 100px
     display: flex
     align-items: center
     font-size: 18px
@@ -54,3 +55,98 @@
     color: #FFFFFF
     &_icon
       margin-right: 14px
+
+.menu-button
+  width: 1.5rem
+  position: fixed
+  top: 3rem
+  right: 5%
+  cursor: pointer
+  height: calc(0.25rem * 5)
+  z-index: 666
+  &  span
+    width: 1.5rem
+    height: 2px
+    background-color: #FFFFFF
+    display: block
+    position: absolute
+    transition: all 0.6s ease
+    &:nth-of-type(2)
+      top: calc(0.25rem * 2)
+    &:nth-of-type(3)
+      top: calc(0.25rem * 4)
+
+  &.active span
+    background-color: white
+    &:nth-of-type(1)
+      transform: translateY(0.5rem) rotate(-45deg)
+    &:nth-of-type(2)
+      transform: translateX(1.5rem)
+      opacity: 0
+    &:nth-of-type(3)
+      transform: translateY(-0.5rem) rotate(45deg)
+
+.menu-overlay
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  background-color: #242B33
+  display: grid
+  grid-template-columns: 3fr 4fr
+  color: white
+  transform: translateX(100%)
+  transition: all 0.6s ease-in-out
+  &_image img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    opacity: 0
+
+  &.open
+    transform: translateX(0)
+    & .menu-overlay_image img
+      animation: fadeIn 0.8s ease-in-out 0.6s forwards
+    & .nav
+      animation: fadeIn 0.8s ease-in-out 0.2s forwards
+
+.nav
+  padding: 2rem
+  opacity: 0
+  &__items
+    display: flex
+    flex-direction: column
+    margin-top: 6rem
+  &__item
+    color: white
+    margin-top: 1rem
+    position: relative
+    transition: all 0.2s ease-in-out
+    &::before
+      content: ""
+      height: 1px
+      width: 0
+      background-color: white
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      transition: all 0.2s ease-in-out
+    &:hover
+      padding-left: 2.5rem
+      &::before
+        width: 1.5rem
+
+.logo
+  position: fixed
+  width: 176px
+  top: 2rem
+  left: 2rem
+  transition: all 0.6s ease-in-out
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
