@@ -236,8 +236,8 @@ h1 {
   padding-bottom: 120px;
   background-image: url("../img/advantages_bg_II.svg");
   background-repeat: no-repeat;
-  background-size: 301px;
-  background-position: 90% bottom;
+  background-size: 274px;
+  background-position: left 90% bottom 40px;
 }
 .advantages .container {
   display: flex;
