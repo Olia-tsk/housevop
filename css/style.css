@@ -237,18 +237,20 @@ h1 {
   background-image: url("../img/advantages_bg_II.svg");
   background-repeat: no-repeat;
   background-size: 274px;
-  background-position: left 90% bottom 40px;
+  background-position: left 90% bottom 20px;
 }
 .advantages .container {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 200px));
+  -moz-column-gap: 70px;
+       column-gap: 70px;
+  justify-content: center;
+  justify-items: center;
 }
 .advantages-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 35px;
-  margin-left: 35px;
 }
 .advantages-item_icon {
   margin-bottom: 53px;
@@ -268,6 +270,13 @@ h1 {
   .container {
     max-width: 90%;
   }
+  .advantages {
+    background-size: calc(170px + 104 * (100vw - 280px) / 1640);
+  }
+  .advantages .container {
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
 }
 @media (max-width: 992px) {
   h1 {
@@ -278,6 +287,13 @@ h1 {
   .contacts-item {
     font-size: calc(14px + 4 * (100vw - 280px) / 1640);
     line-height: calc(16px + 5 * (100vw - 280px) / 1640);
+  }
+  .advantages-item_icon {
+    margin-bottom: 40px;
+  }
+  .advantages-item_text {
+    font-size: 18px;
+    line-height: 21px;
   }
 }
 @media (max-width: 835px) {
@@ -293,6 +309,10 @@ h1 {
   .menu-button {
     display: block;
   }
+  .advantages .container {
+    grid-template-columns: repeat(2, minmax(150px, 200px));
+    row-gap: 50px;
+  }
 }
 @media (max-width: 768px) {
   .header-logo {
@@ -305,10 +325,23 @@ h1 {
     width: 75%;
     margin-bottom: 10%;
   }
+  .advantages {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 @media (max-width: 683px) {
   .menu-overlay {
     grid-template-columns: 4fr 4fr;
+  }
+  .advantages-item_icon {
+    margin-bottom: 30px;
+    width: 70px;
+    height: 70px;
+  }
+  .advantages-item_text {
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 @media (max-width: 576px) {
@@ -325,6 +358,13 @@ h1 {
   }
   .contacts-item:not(:last-child) {
     margin-bottom: 15px;
+  }
+  .advantages {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  .advantages .container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
   }
 }
 @media (max-width: 460px) {
@@ -348,6 +388,12 @@ h1 {
   .contacts-item_icon {
     height: 18px;
   }
+  .advantages .container {
+    row-gap: 40px;
+  }
+  .advantages-item_icon {
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 320px) {
   .menu-button {
@@ -370,5 +416,8 @@ h1 {
   }
   .contacts-item:not(:last-child) {
     margin-bottom: 10px;
+  }
+  .advantages .container {
+    grid-template-columns: 90%;
   }
 }/*# sourceMappingURL=style.css.map */
