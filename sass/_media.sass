@@ -1,0 +1,96 @@
+@media (max-width: 1240px)
+  .container
+    max-width: 90%
+
+@media (max-width: 992px)
+  h1
+    margin-bottom: 15%
+    font-size: calc( 26px + (48 - 26) * (100vw - 280px) / (1920 - 280) )
+    line-height: calc( 35px + (64 - 35) * (100vw - 280px) / (1920 - 280) )
+  .contacts
+    &-item
+      font-size: calc( 14px + (18 - 14) * (100vw - 280px) / (1920 - 280) )
+      line-height: calc( 16px + (21 - 16) * (100vw - 280px) / (1920 - 280) )
+
+@media (max-width: 835px)
+  .main
+    &-header
+      padding-bottom: 0
+    &-title
+      width: 70%
+  .header
+    &-menu
+      display: none
+  .menu
+    &-button
+      display: block
+
+@media (max-width: 768px)
+  .header
+    &-logo
+      width: 120px
+  .main
+    &-title
+      & img
+        width: 35px
+    &-bottom
+      width: 75%
+      margin-bottom: 10%
+
+@media (max-width: 683px)
+  .menu
+    &-overlay
+      grid-template-columns: 4fr 4fr
+
+@media (max-width: 576px)
+  .menu
+    &-overlay
+      grid-template-columns: 4fr 3fr
+  .main
+    background-position: center, 85%
+    &-bottom
+      flex-direction: column
+      align-items: center
+      justify-content: unset
+  .contacts
+    &-item
+      &:not(:last-child)
+        margin-bottom: 15px
+
+@media (max-width: 460px)
+  .menu
+    &-overlay
+      grid-template-columns: 4fr
+  .logo
+    width: min-content
+    & img
+      width: 130px
+  .main
+    &-title
+      width: 80%
+    &-bottom
+      width: 100%
+  .contacts
+    &-item
+      &_icon
+        height: 18px
+
+@media (max-width: 320px)
+  .menu
+    &-button
+      top: 40px
+  .main
+    background-position: center, 65%
+    &-header
+      padding-top: 20px
+    &-title
+      width: 100%
+      & img
+        width: 30px
+  .header
+    &-logo
+      width: 50%
+  .contacts
+    &-item
+      &:not(:last-child)
+        margin-bottom: 10px
