@@ -44,6 +44,56 @@ h2 {
   margin-right: auto;
 }
 
+.form p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+}
+.form input {
+  padding: 0;
+  height: 50px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 27px;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid transparent;
+}
+.form input::-moz-placeholder {
+  color: #BEBEBE;
+}
+.form input:-ms-input-placeholder {
+  color: #BEBEBE;
+}
+.form input::placeholder {
+  color: #BEBEBE;
+}
+.form input:focus {
+  outline: none;
+  border: 1px solid #D4C17F;
+}
+
+.button {
+  padding: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  text-align: center;
+  color: #FFFFFF;
+  background: #D4C17F;
+  border: none;
+  cursor: pointer;
+}
+
 .main {
   background: linear-gradient(180deg, #242B33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242B33 92.19%), url("../img/main_bg.png");
   background-repeat: no-repeat, no-repeat;
@@ -326,6 +376,39 @@ h2 {
   font-size: calc(16px + 8 * (100vw - 280px) / 1640);
   line-height: calc(19px + 9 * (100vw - 280px) / 1640);
   z-index: 10;
+}
+
+.request {
+  padding-top: 180px;
+  padding-bottom: 180px;
+  background: linear-gradient(180deg, #242B33 10.42%, rgba(36, 43, 51, 0) 50.52%, #242B33 90.1%), linear-gradient(0deg, rgba(36, 43, 51, 0.9), rgba(36, 43, 51, 0.9)), url("../img/request_bg.png"), #242B33;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+}
+.request-title {
+  margin-bottom: 30px;
+}
+.request-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.request-container_text {
+  margin: 0;
+  width: 48%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.request-container_form {
+  width: 49%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  grid-auto-rows: 50px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 35px;
 }
 
 @media (max-width: 1240px) {
