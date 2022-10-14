@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+}
 
 body {
   background-color: #242B33;
@@ -74,7 +77,6 @@ h2 {
   color: #BEBEBE;
 }
 .form input:focus {
-  outline: none;
   border: 1px solid #D4C17F;
 }
 
@@ -435,6 +437,10 @@ h2 {
   .apartments-grid {
     row-gap: 35px;
   }
+  .request-container_text {
+    font-size: calc(14px + 2 * (100vw - 280px) / 1640);
+    line-height: calc(22px + 2 * (100vw - 280px) / 1640);
+  }
 }
 @media (max-width: 992px) {
   h1 {
@@ -452,6 +458,10 @@ h2 {
   .advantages-item_text {
     font-size: 18px;
     line-height: 21px;
+  }
+  .request {
+    padding-top: 160px;
+    padding-bottom: 160px;
   }
 }
 @media (max-width: 835px) {
@@ -477,6 +487,16 @@ h2 {
   .apartments-title {
     margin-bottom: 60px;
   }
+  .request {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  .request-container {
+    align-items: flex-start;
+  }
+  .request-container_form {
+    row-gap: 25px;
+  }
 }
 @media (max-width: 768px) {
   .header-logo {
@@ -493,6 +513,12 @@ h2 {
     padding-top: 100px;
     padding-bottom: 100px;
   }
+  .request-container_text {
+    width: 50%;
+  }
+  .request-container_form {
+    width: 46%;
+  }
 }
 @media (max-width: 683px) {
   .menu-overlay {
@@ -506,6 +532,24 @@ h2 {
   .advantages-item_text {
     font-size: 16px;
     line-height: 19px;
+  }
+  .request {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+  .request-title {
+    margin-bottom: 20px;
+  }
+  .request-container {
+    flex-direction: column;
+  }
+  .request-container_text {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .request-container_form {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
   }
 }
 @media (max-width: 576px) {
@@ -534,8 +578,22 @@ h2 {
     grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
+  .request {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 @media (max-width: 460px) {
+  .form p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .form input {
+    height: 45px;
+  }
+  .button {
+    height: 45px;
+  }
   .menu-overlay {
     grid-template-columns: 4fr;
   }
@@ -579,6 +637,17 @@ h2 {
     margin-bottom: 30px;
     margin-right: 30px;
   }
+  .request {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    background-position: 55% center, center center;
+  }
+  .request-title {
+    margin-bottom: 15px;
+  }
+  .request-container_form {
+    row-gap: 20px;
+  }
 }
 @media (max-width: 320px) {
   .menu-button {
@@ -608,5 +677,9 @@ h2 {
   .apartments-grid_item p {
     margin-bottom: 15px;
     margin-right: 20px;
+  }
+  .request {
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 }/*# sourceMappingURL=style.css.map */
