@@ -1,10 +1,19 @@
 @media (max-width: 1240px)
+  h2
+    font-size: calc( 26px + (36 - 26) * (100vw - 280px) / (1920 - 280) )
+    line-height: calc( 35px + (48 - 35) * (100vw - 280px) / (1920 - 280) )
   .container
     max-width: 90%
   .advantages
     background-size: calc( 170px + (274 - 170) * (100vw - 280px) / (1920 - 280) )
     & .container
       column-gap: 40px
+  .apartments
+    background-position: 2% 60px
+    &-title
+      margin-bottom: 80px
+    &-grid
+      row-gap: 35px
 
 @media (max-width: 992px)
   h1
@@ -39,6 +48,10 @@
     & .container
       grid-template-columns: repeat(2, minmax(150px, 200px))
       row-gap: 50px
+  .apartments
+    background-position: 1% 50px
+    &-title
+      margin-bottom: 60px
 
 @media (max-width: 768px)
   .header
@@ -88,6 +101,9 @@
     padding-bottom: 90px
     & .container
       grid-template-columns: repeat(auto-fit, minmax(150px, 200px))
+  .apartments
+    &-grid
+      grid-auto-rows: min-content
 
 @media (max-width: 460px)
   .menu
@@ -112,6 +128,19 @@
     &-item
       &_icon
         margin-bottom: 20px
+  .apartments
+    background-position: 2% 45px
+    &-title
+      margin-bottom: 40px
+    &-grid
+      grid-template-columns: 95%
+      row-gap: 30px
+      &_item p
+        right: 0
+        left: auto
+        margin: 0
+        margin-bottom: 30px
+        margin-right: 30px
 
 @media (max-width: 320px)
   .menu
@@ -135,3 +164,8 @@
   .advantages
     & .container
       grid-template-columns: 90%
+  .apartments
+    &-grid
+      &_item p
+        margin-bottom: 15px
+        margin-right: 20px
