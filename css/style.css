@@ -455,6 +455,61 @@ h2 {
   width: 255px;
 }
 
+.footer {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  background-color: #2D343C;
+}
+.footer .container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-menu_item {
+  margin-bottom: 15px;
+}
+.footer-menu_link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+.footer-column_text {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+.footer-column_text--phone {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+.footer-column_text--email {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: #D4C17F;
+}
+.footer-column_social {
+  display: flex;
+  gap: 20px;
+}
+.footer-column_social a {
+  height: 20px;
+}
+.footer-column_social a img {
+  height: 100%;
+}
+
 @media (max-width: 1465px) {
   .map {
     position: relative;
@@ -590,6 +645,9 @@ h2 {
   .questions-form input, .questions-form p, .questions-form button {
     width: auto;
   }
+  .footer-column_logo {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   .header-logo {
@@ -664,6 +722,20 @@ h2 {
   }
   .questions-form {
     row-gap: 25px;
+  }
+  .footer .container {
+    justify-content: space-evenly;
+  }
+  .footer-column {
+    width: 100%;
+    text-align: center;
+  }
+  .footer-column_social {
+    margin-top: 30px;
+    justify-content: center;
+  }
+  .footer-menu:last-of-type {
+    text-align: right;
   }
 }
 @media (max-width: 576px) {
@@ -789,6 +861,27 @@ h2 {
   }
   .questions-form {
     row-gap: 20px;
+  }
+  .footer .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 25px;
+  }
+  .footer-column_logo {
+    margin-bottom: 20px;
+  }
+  .footer-column_text {
+    margin-bottom: 10px;
+  }
+  .footer-menu {
+    text-align: center;
+  }
+  .footer-menu:last-of-type {
+    text-align: center;
+  }
+  .footer-menu_item {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 320px) {
