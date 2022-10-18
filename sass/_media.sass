@@ -1,3 +1,12 @@
+@media (max-width: 1465px)
+  .map
+    position: relative
+    &-source
+      position: unset
+      &::before
+        top: 80px
+        left: 2%
+
 @media (max-width: 1240px)
   h2
     font-size: calc( 26px + (36 - 26) * (100vw - 280px) / (1920 - 280) )
@@ -19,6 +28,13 @@
       &_text
         font-size: calc( 14px + (16 - 14) * (100vw - 280px) / (1920 - 280) )
         line-height: calc( 22px + (24 - 22) * (100vw - 280px) / (1920 - 280) )
+  .map
+    &-title
+      margin-bottom: 80px
+    &-source
+      width: 85%
+      &::before
+        top: 60px
 
 @media (max-width: 992px)
   h1
@@ -38,6 +54,8 @@
         line-height: 21px
   .request
     padding-top: 160px
+    padding-bottom: 160px
+  .map
     padding-bottom: 160px
   .questions
     padding-bottom: 160px
@@ -69,6 +87,14 @@
       align-items: flex-start
       &_form
         row-gap: 25px
+  .map
+    padding-bottom: 150px
+    &-title
+      margin-bottom: 60px
+    &-source
+      &::before
+        top: 50px
+        left: 1%
   .questions
     padding-bottom: 150px
     &-title
@@ -100,6 +126,9 @@
         width: 50%
       &_form
         width: 46%
+  .map
+    &-source
+      width: 90%
   .questions
     &-title
       margin-bottom: 30px
@@ -130,6 +159,10 @@
       &_form
         width: 100%
         grid-template-columns: repeat(auto-fit, minmax(230px, 1fr))
+  .map
+    padding-bottom: 140px
+    &-source
+      width: 95%
   .questions
     padding-bottom: 140px
     &-title
@@ -161,6 +194,8 @@
       grid-auto-rows: min-content
   .request
     padding-top: 120px
+    padding-bottom: 120px
+  .map
     padding-bottom: 120px
   .questions
     padding-bottom: 120px
@@ -218,6 +253,15 @@
     &-container
       &_form
         row-gap: 20px
+  .map
+    padding-bottom: 110px
+    &-title
+      margin-bottom: 40px
+    &-source
+      width: 100%
+      &::before
+        top: 45px
+        left: 2%
   .questions
     padding-bottom: 110px
     &-title
@@ -258,6 +302,8 @@
     &-container
       &_form
         grid-template-columns: 1fr
+  .map
+    padding-bottom: 90px
   .questions
     padding-bottom: 90px
     &-form
