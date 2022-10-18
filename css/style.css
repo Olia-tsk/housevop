@@ -413,6 +413,22 @@ h2 {
   row-gap: 35px;
 }
 
+.questions {
+  padding-bottom: 180px;
+}
+.questions-title {
+  margin-bottom: 50px;
+}
+.questions-form {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.questions-form input, .questions-form p, .questions-form button {
+  width: 255px;
+}
+
 @media (max-width: 1240px) {
   h2 {
     font-size: calc(26px + 10 * (100vw - 280px) / 1640);
@@ -463,6 +479,9 @@ h2 {
     padding-top: 160px;
     padding-bottom: 160px;
   }
+  .questions {
+    padding-bottom: 160px;
+  }
 }
 @media (max-width: 835px) {
   .main-header {
@@ -497,6 +516,20 @@ h2 {
   .request-container_form {
     row-gap: 25px;
   }
+  .questions {
+    padding-bottom: 150px;
+  }
+  .questions-title {
+    margin-bottom: 40px;
+  }
+  .questions-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-auto-rows: auto;
+  }
+  .questions-form input, .questions-form p, .questions-form button {
+    width: auto;
+  }
 }
 @media (max-width: 768px) {
   .header-logo {
@@ -518,6 +551,9 @@ h2 {
   }
   .request-container_form {
     width: 46%;
+  }
+  .questions-title {
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 683px) {
@@ -549,7 +585,14 @@ h2 {
   }
   .request-container_form {
     width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  .questions {
+    padding-bottom: 140px;
+  }
+  .questions-title {
+    margin-bottom: 20px;
+  }
+  .questions-form {
+    row-gap: 25px;
   }
 }
 @media (max-width: 576px) {
@@ -580,6 +623,9 @@ h2 {
   }
   .request {
     padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .questions {
     padding-bottom: 120px;
   }
 }
@@ -648,6 +694,15 @@ h2 {
   .request-container_form {
     row-gap: 20px;
   }
+  .questions {
+    padding-bottom: 110px;
+  }
+  .questions-title {
+    margin-bottom: 15px;
+  }
+  .questions-form {
+    row-gap: 20px;
+  }
 }
 @media (max-width: 320px) {
   .menu-button {
@@ -681,5 +736,11 @@ h2 {
   .request {
     padding-top: 90px;
     padding-bottom: 90px;
+  }
+  .questions {
+    padding-bottom: 90px;
+  }
+  .questions-form {
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=style.css.map */
